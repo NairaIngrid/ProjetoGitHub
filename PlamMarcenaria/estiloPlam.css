@@ -1,0 +1,320 @@
+*{
+	margin: 0; padding: 0;
+}
+
+body{
+	background-color: rgb(255,255,255);
+}
+
+section{
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 6vh 25vh 100vh 30vh 10vh;
+	grid-template-areas:"t t" 
+						"h h"
+						"m n"
+						"nv n"
+						"f f";
+}
+
+#nav-menu{
+	background-color: #A58061;
+	grid-area: t;
+}
+
+
+#ul-menu{
+	list-style-type: none;
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+li{
+	color: #777;
+	font-size: 2rm;
+	margin-right: 40px;
+	font: 1.2rem 'Roboto', sans-serif;
+	margin-bottom: 10px;
+
+}
+
+header{
+
+	grid-area: h;
+	width: 100%;
+	height: 230px;
+}
+header img{
+	width: 100%;
+	height: 200px;
+}
+
+img, video{
+
+	width: 100%;
+	height: 200px;
+	border-radius: 8px;
+	
+}
+
+#ul-vantagens{
+
+	list-style-type: circle;
+	height: 100%;
+	/*display: flex;*/
+	justify-content: flex-end;
+	align-items: center;
+}
+
+#pag-vantagens{
+
+	background-color: #F2F2F2; 
+	grid-area: n;
+	padding: 15px;
+}
+
+
+#pag-catalogo{
+	background-color:#F2F2F2;
+	grid-area: m;
+	/*display: flex;*/
+	/*flex-wrap: wrap;*/
+	
+}
+
+#pag-historico{
+
+	background-color:#F2F2F2; 
+	grid-area: nv;
+	padding: 15px;
+	/*clear: both;*/
+	/*position: sticky;*/
+}
+
+
+a{ /*referente ao texto da caixa*/
+	font: 1.2rem 'Roboto', sans-serif;
+  	text-decoration: none;
+ 	
+}
+
+.a-menu{
+	margin-right: 40px;
+ 	font-weight: bold; /*poderia colocar tb a gramatura 300, 400*/
+}
+
+.a-menu:link /*carregado*/, .a-menu:visited /*visitado*/ {
+	color:#FFF;
+} 
+
+.a-menu:hover,/*quando passa o mouse sobre*/.a-menu:active { /*clicado*/
+	color:#3F51B5;
+}
+
+main{
+	width: 100%;
+	background-color: #F5F5F5;
+	/*box-sizing: border-box; /*retira a barra de rolagem */
+}
+
+h1{
+	font: 3rem 'Kaushan Script', cursive;
+	/*font-family 'Kaushan Script' cursive;
+	font-size: 3rem; /* rem= porcentagem para texto; do tamanho original*/
+	color: #5D3B3B;
+	text-align: center;
+	margin-bottom: 50px; /*distancia da margem*/
+/*	margin: 5px 10px 20px 30 px na ordem topo, height??, bottom e left*/;
+}
+
+#catalogo{
+	padding: 10px;
+
+
+}
+
+#container{
+	display: flex;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	flex-wrap: wrap;
+	flex-wrap: wrap-reverse;
+	align-items: center;
+	align-items: stretch;
+
+}
+
+.card{ /*como está dentro da div, não precisa formatar as imagens separadas*/
+	background-color: #FFF;
+	height: 160px;
+	margin:10px;
+	width:25%;
+	border-radius: 8px;/*arredonda as bordas*/
+	box-shadow: 0 4px 8px #CCC; /*sombreado, para lado direito- valor negativo*/
+	transition: 0.1s;/*tempo do efeito de transição para o hover*/
+}
+
+.card-content{
+	padding: 10px;
+}
+.card:hover{
+	box-shadow: 0 8px 16px #CCC;
+}
+
+.card-content p{
+	font: 1rem 'Roboto' sans-serif;
+	line-height: 20px;/*espacamento entre letras*/
+}
+
+.box-video{
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+
+p{
+	font: 1rem 'Roboto', sans-serif;
+	color: #777;
+	text-align: justify;
+/*	text-indent: 20px; espaçamento do primeiro paragrafo*/
+	line-height: 30px;/*espacamento entre letras*/
+}
+
+#txt-preto{
+	color: #000;
+}
+
+h2{
+	font: 2rem 'Kaushan Script', cursive;
+	color: #5D3B3B;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+h3{
+	font: 1rem 'Kaushan Script', cursive;
+	color: #5D3B3B;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+footer{
+	background-color: #A58061;
+	width: 100%;
+	grid-area: f;
+	position: relative;
+	clear: both;
+	position: unset;
+}
+
+
+footer p{
+	font: 1.5rem 'Kaushan Script', cursive;
+	text-align: center;
+	color: #FFF;
+}
+
+/*footer a{ 
+	color: #FFF;
+}
+footer a:hover{
+	color: #00BCD4;
+}*/
+
+
+
+/* PAGINA DE CONTATOS*/
+
+
+#pag-depoimentos{
+	background-color:#F2F2F2; 
+	align-items: center;
+
+}
+
+.card-depoimentos{ /*como está dentro da div, não precisa formatar as imagens separadas*/
+	background-color: #F0E6DE;
+	height: 160px;
+	margin:10px;
+	width:25%;
+
+	border-radius: 8px;/*arredonda as bordas*/
+	box-shadow: 0 4px 8px #CCC; /*sombreado, para lado direito- valor negativo*/
+	transition: 0.1s;/*tempo do efeito de transição para o hover*/
+}
+
+
+/*video{
+	width: 400px;
+}*/
+
+
+#pag-contatos{
+	background-color:#FFF;
+
+}
+
+
+form{
+	width: 400px;
+	margin: 0 auto; /*centraliza*/
+
+}
+
+input, textarea{
+	width: 100%;
+	height: 30px;
+	margin-bottom: 10px;
+	padding-left: 5px;
+	box-sizing: border-box;
+	border: 1px solid #C4C4C4;
+	color: #777;
+}
+label, input, textarea{
+	font: 1rem 'Roboto' sans-serif;
+}
+
+
+textarea{
+	height: 80px;
+}
+
+#botoes-form{
+	display: flex;
+}
+
+input[type="submit"], input[type="reset"]{
+	/*margin: 20px;*/
+	background-color: #06690F;
+	color: #FFF;
+	border: 0;
+	border-radius: 5px
+}
+
+input[type="reset"]{
+	background-color: #B00C0C;
+}
+
+.container-imagens{
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;/*centraliza o container*/
+	align-items: center; /*centraliza os itens do container*/
+
+}
+.container-imagens p{
+	color: #000;
+}
+
+.img-icones{
+	width: 30px;
+	height: 30px;
+	padding: 10px;
+}
+
